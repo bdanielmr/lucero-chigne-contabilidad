@@ -1,0 +1,121 @@
+@import "styles/settings/__settings";
+
+.description {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+.containerHeader {
+  width: 100%;
+  background: rgba(244, 233, 227, 1);
+  height: 77vh;
+  img {
+    width: 40%;
+    height: 90vh;
+  }
+  p {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25%;
+    left: 38%;
+    a {
+      color: rgba(202, 61, 21, 1);
+      font-family: "Playfair Display";
+      font-weight: 800;
+      font-size: 54px;
+      margin: 2.5px 0px;
+      background: rgba(225, 175, 156, 1);
+      padding: 0px 20px;
+      cursor: pointer;
+    }
+  }
+  span {
+    position: relative;
+    bottom: 25%;
+    left: 16%;
+    font-weight: 600;
+    color: rgba(91, 79, 92, 1);
+    font-family: "Playfair Display";
+  }
+
+  button {
+    position: relative;
+    bottom: 22%;
+    left: 70%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(202, 61, 21, 1);
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    font-size: 18px;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @media (min-width: 1400px) {
+    height: 80vh;
+    p {
+      a {
+        font-size: 68px;
+      }
+    }
+    button {
+      position: relative;
+      bottom: 16%;
+      left: 67%;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: rgba(202, 61, 21, 1);
+      border: none;
+      cursor: pointer;
+      color: white;
+      display: flex;
+      font-size: 18px;
+      font-weight: 800;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+.contentHomeWp {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  h2 {
+  }
+  p {
+    left: 0;
+    width: 50%;
+    top: 100px;
+    position: absolute;
+  }
+}
+.posts {
+  list-style: none;
+  padding-left: 0;
+  margin: -1rem 0;
+
+  & > li {
+    margin: 4em 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

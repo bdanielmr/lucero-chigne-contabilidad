@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
+
+.labelMenuOpen {
+  .menu {
+    display: block;
+    right: 150px;
+    top: 0.1%;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 0 #fff;
+    cursor: pointer;
+  }
+  .hamburger {
+    position: relative;
+    top: 50%;
+    right: 0px;
+    width: 25px;
+    height: 2px;
+    background: rgba(202, 61, 21, 1);
+    display: block;
+    transform-origin: center;
+    transition: 0.5s ease-in-out;
+    &:after,
+    &:before {
+      transition: 0.5s ease-in-out;
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(202, 61, 21, 1);
+    }
+    &:before {
+      top: -5px;
+    }
+    &:after {
+      bottom: -5px;
+    }
+  }
+  .inputMenuOpen {
+    display: none;
+  }
+  .inputMenuOpen:checked + .menu {
+    border-radius: 0;
+    .hamburger {
+      transform: rotate(45deg);
+      &:after {
+        transform: rotate(90deg);
+        bottom: 0;
+      }
+      &:before {
+        transform: rotate(90deg);
+        top: 0;
+      }
+    }
+  }
+
+  .inputMenuOpen:checked + .menu + ul {
+    display: block;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    animation: fade-in 0.8s;
+  }
+  .inputMenuOpen + .menu + ul {
+    transition: 0.9s ease-in-out;
+  }
+  .ulMenuOpen {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: 95px;
+    opacity: 0;
+
+    width: 100%;
+  }
+
+  .aMenuOpen {
+    display: flex;
+    margin: 0;
+    color: white;
+
+    font-size: 26px;
+    font-weight: 600;
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+    li {
+      list-style: none;
+      margin: 0px 50px;
+      font-size: 16px;
+      a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
