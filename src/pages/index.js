@@ -15,6 +15,7 @@ import Pagination from 'components/Pagination';
 import styles from 'styles/pages/Home.module.scss';
 import FeaturedImage from 'components/FeaturedImage';
 import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
+import { Cat } from 'react-kawaii';
 export default function Home({ posts, pagination, pageHome }) {
   const { metaTitle, slug, content, featuredImage, children } = pageHome;
   console.log('featuredImage', featuredImage.sourceUrl);
@@ -39,7 +40,12 @@ export default function Home({ posts, pagination, pageHome }) {
                     Lucero Chigne
                   </RoughNotation>
                 </p>
-                <p style={{ fontSize: '2rem', fontStyle: 'italic' }}>(an expensive)</p>
+                <p style={{ fontSize: '2rem', fontStyle: 'italic' }}>
+                  (an expensive)
+                  <span style={{ position: 'absolute', marginLeft: '5%', marginTop: '2%' }}>
+                    <Cat size={130} mood="blissful" color="#FCCB7E" />
+                  </span>
+                </p>
                 <RoughNotation color="orange" type="circle" show={true}>
                   Accountant
                 </RoughNotation>{' '}
