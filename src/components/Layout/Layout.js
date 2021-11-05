@@ -7,7 +7,6 @@ import { helmetSettingsFromMetadata } from 'lib/site';
 
 import Nav from 'components/Nav';
 import Main from 'components/Main';
-import Footer from 'components/Footer';
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -63,12 +62,11 @@ const Layout = ({ children }) => {
   return (
     <div className={styles.layoutContainer}>
       <Helmet {...helmetSettings} />
-
-      <Nav />
+      <div className={styles.layoutContainerCenter}>
+        <Nav />
+      </div>
 
       <Main>{children}</Main>
-
-      <Footer />
     </div>
   );
 };

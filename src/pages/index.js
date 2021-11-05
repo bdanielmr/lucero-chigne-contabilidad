@@ -4,7 +4,7 @@ import { getPaginatedPosts } from 'lib/posts';
 
 import { getPageByUri } from 'lib/pages';
 import { WebsiteJsonLd } from 'lib/json-ld';
-
+import React, { useEffect, useState } from 'react';
 import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Section from 'components/Section';
@@ -14,7 +14,7 @@ import Pagination from 'components/Pagination';
 
 import styles from 'styles/pages/Home.module.scss';
 import FeaturedImage from 'components/FeaturedImage';
-
+import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
 export default function Home({ posts, pagination, pageHome }) {
   const { metaTitle, slug, content, featuredImage, children } = pageHome;
   console.log('featuredImage', featuredImage.sourceUrl);
@@ -22,41 +22,56 @@ export default function Home({ posts, pagination, pageHome }) {
   const { title, description } = metadata;
 
   return (
-    <Layout>
-      <WebsiteJsonLd siteTitle={title} />
-      <div className={styles.containerHeader}>
-        {featuredImage && <img src={featuredImage.sourceUrl} />}
-        <p>
-          <a style={{ width: '50%' }}>Estrategias </a>
-          <a>contables con autoridad</a>
-          <a style={{ width: '60%' }}>e inteligentes</a>
-        </p>
-        <span>REALIZAREMOS UN SEGUIMIENTO DE TODO</span>
-        <button>▼</button>
-      </div>
+    <>
+      <Layout>
+        <WebsiteJsonLd siteTitle={title} />
 
-      <Section>
-        <Container>
-          <h2 className="sr-only">Posts</h2>
-          <ul className={styles.posts}>
-            <div
-              className={styles.contentHomeWp}
-              dangerouslySetInnerHTML={{
-                __html: content,
-              }}
-            />
-          </ul>
-          {pagination && (
-            <Pagination
-              addCanonical={false}
-              currentPage={pagination?.currentPage}
-              pagesCount={pagination?.pagesCount}
-              basePath={pagination?.basePath}
-            />
-          )}
-        </Container>
-      </Section>
-    </Layout>
+        <Section style={{ margin: '0', padding: '0' }}>
+          <Container>
+            <h2 className="sr-only">Posts</h2>
+            <ul className={styles.posts}>
+              <div className={styles.containerPost}>
+                <a>Hi!</a>
+                <p>
+                  {"I'm"}
+
+                  <RoughNotation color="orangered" customElement="span" type="box" show={true}>
+                    Lucero Chigne
+                  </RoughNotation>
+                </p>
+                <p style={{ fontSize: '2rem', fontStyle: 'italic' }}>(an expendive)</p>
+                <RoughNotation color="orange" type="circle" show={true}>
+                  Accountant
+                </RoughNotation>{' '}
+                & <p>Financial advises in</p>
+                <p>
+                  <RoughNotation strokeWidth={3} color="orangered" customElement="span" type="underline" show={true}>
+                    Trujillo, PE
+                  </RoughNotation>
+                </p>
+                <p className={styles.texExperience}>with experience in the creative industry</p>
+              </div>
+              {false && (
+                <div
+                  className={styles.contentHomeWp}
+                  dangerouslySetInnerHTML={{
+                    __html: content,
+                  }}
+                />
+              )}
+            </ul>
+            {false && (
+              <Pagination
+                addCanonical={false}
+                currentPage={pagination?.currentPage}
+                pagesCount={pagination?.pagesCount}
+                basePath={pagination?.basePath}
+              />
+            )}
+          </Container>
+        </Section>
+      </Layout>
+    </>
   );
 }
 

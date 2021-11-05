@@ -1,5 +1,17 @@
 .layoutContainer {
+  width: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  min-height: 90vh;
+  position: fixed;
+  Main {
+    border-top: 1px solid #cfd7de;
+    border-bottom: 1px solid #cfd7de;
+  }
+}
+.layoutContainerCenter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

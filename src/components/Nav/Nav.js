@@ -186,39 +186,23 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <Section className={styles.navSection}>
-        <div className={styles.navSectionSocial}>
-          <a>
-            <RiFacebookFill />
-          </a>
+        <div style={{ marginLeft: '80px' }} className={styles.navSectionSocial}>
           <a>
             <RiInstagramLine />
           </a>
-          <a>
-            <RiTwitterFill />
-          </a>
-          <a></a>
         </div>
-        <p className={styles.navName}>
-          <Link href="/">
-            <div className={styles.navSearchContainer}>
-              <a>{title}</a>
-              <span className={styles.navSearchSpan}>{description.toUpperCase()}</span>
-            </div>
-          </Link>
-        </p>
+
         {/**        <ul className={styles.navMenu}>
           {navigation?.map((listItem) => {
             return <NavListItem key={listItem.id} className={styles.navSubMenu} item={listItem} />;
           })}
         </ul> */}
 
-        <div>
-          {
-            <button onClick={handleButton} className={styles.searchButton} disabled={!searchIsLoaded}>
-              <span>MENU</span>
-              <CustomOpenMenu navigation={navigation} />
-            </button>
-          }
+        <div className={styles.searchButtonContainer}>
+          <button onClick={handleButton} className={styles.searchButton} disabled={!searchIsLoaded}>
+            <span>MENU</span>
+            <CustomOpenMenu className={styles.CustomOpenMenuComponent} navigation={navigation} />
+          </button>
 
           {/**
            * 
