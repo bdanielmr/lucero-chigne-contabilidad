@@ -39,7 +39,7 @@ export default function Home({ posts, pagination, pageHome }) {
                     Lucero Chigne
                   </RoughNotation>
                 </p>
-                <p style={{ fontSize: '2rem', fontStyle: 'italic' }}>(an expendive)</p>
+                <p style={{ fontSize: '2rem', fontStyle: 'italic' }}>(an expensive)</p>
                 <RoughNotation color="orange" type="circle" show={true}>
                   Accountant
                 </RoughNotation>{' '}
