@@ -42,8 +42,8 @@ export default function Home({ posts, pagination, pageHome }) {
                 </p>
                 <p style={{ fontSize: '2rem', fontStyle: 'italic' }}>
                   (an expensive)
-                  <span style={{ position: 'absolute', marginLeft: '5%', marginTop: '2%' }}>
-                    <Cat size={130} mood="blissful" color="#FCCB7E" />
+                  <span style={{ position: 'absolute', marginLeft: '10%', marginTop: '1%' }}>
+                    <Cat size={130} mood="blissful" color="#596881" />
                   </span>
                 </p>
                 <RoughNotation color="orange" type="circle" show={true}>
