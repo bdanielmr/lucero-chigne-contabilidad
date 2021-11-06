@@ -200,8 +200,6 @@ const Nav = () => {
 
         <div className={styles.searchButtonContainer}>
           <button onClick={handleButton} className={styles.searchButton} disabled={!searchIsLoaded}>
-            <span>MENU</span>
-
             <CustomOpenMenu className={styles.CustomOpenMenuComponent} navigation={navigation} />
           </button>
 

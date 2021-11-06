@@ -33,7 +33,6 @@ export default function Home({ posts, pagination, pageHome }) {
       <Layout>
         <Section
           style={{
-            margin: '0',
             padding: '50px 0px 0px 0px',
 
             display: 'flex',
@@ -41,15 +40,17 @@ export default function Home({ posts, pagination, pageHome }) {
             justifyContent: 'center',
           }}
         >
-          <Carousel showStatus={false}>
-            <div className={styles.containerPost}>
-              <a>
-                P<span style={{ color: 'white' }}>{'rofesional en '}</span>
-              </a>
-              <p>
-                <RoughNotation color="orangered" customElement="span" type="box" show={true}>
-                  contabilidad
+          <Carousel swipeable={false} emulateTouch={true} showStatus={false}>
+            <div style={{ marginRight: '5%' }} className={styles.containerPost}>
+              <p style={{ margin: '0', fontSize: '2rem', color: 'white' }}>
+                <RoughNotation color="orangered" type="highlight" show={true}>
+                  Profesional{' '}
                 </RoughNotation>
+              </p>
+
+              <p>
+                E<span style={{ color: 'white' }}>{'n '}</span>
+                contabilidad
                 {' con asesoramiento'}
               </p>
               <p style={{ fontSize: '2rem', fontStyle: 'italic' }}>
@@ -80,7 +81,12 @@ export default function Home({ posts, pagination, pageHome }) {
               )}
             </div>
 
-            <div>
+            <div style={{ marginRight: '0%' }}>
+              <p style={{ margin: '0', fontSize: '2rem', color: 'white' }}>
+                <RoughNotation color="orangered" type="highlight" show={true}>
+                  Sobre Mi{' '}
+                </RoughNotation>
+              </p>
               <a href="#" className={styles.swipeIconUPdOW}></a>
               <Carousel
                 swipeable
@@ -103,11 +109,6 @@ export default function Home({ posts, pagination, pageHome }) {
                     width: '100%',
                   }}
                 >
-                  <p style={{ margin: '0', fontSize: '2rem', color: 'white' }}>
-                    <RoughNotation color="orangered" type="highlight" show={true}>
-                      Sobre Mi{' '}
-                    </RoughNotation>
-                  </p>
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
                     Contadora pública colegiada, empresaria y diseñadora gráfica
                   </p>
@@ -200,7 +201,7 @@ export default function Home({ posts, pagination, pageHome }) {
                 </div>
               </Carousel>
             </div>
-            <div>
+            <div style={{ marginRight: '0%' }}>
               <p style={{ margin: '0', fontSize: '2rem', color: 'white' }}>
                 <RoughNotation color="orangered" type="highlight" show={true}>
                   Servicios{' '}
@@ -248,7 +249,14 @@ export default function Home({ posts, pagination, pageHome }) {
                 </div>
               </div>
             </div>
-            <div></div>
+
+            <div style={{ marginRight: '0s%' }}>
+              <p style={{ margin: '0', fontSize: '2rem', color: 'white' }}>
+                <RoughNotation color="orangered" type="highlight" show={true}>
+                  Contacto{' '}
+                </RoughNotation>
+              </p>
+            </div>
           </Carousel>
           {false && (
             <Pagination
