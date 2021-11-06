@@ -108,8 +108,10 @@
   justify-content: center;
   list-style: none;
   padding-left: 0;
-  margin: -1rem 0;
-  height: 85vh;
+  margin: 0 0;
+  height: 95vh;
+
+  width: 60vw;
   & > li {
     margin: 4em 0;
 
@@ -123,7 +125,8 @@
   }
 }
 .containerPost {
-  font-size: 2.8rem;
+  cursor: pointer;
+  font-size: 1.8rem;
   color: white;
   a,
   a:hover,
@@ -132,10 +135,10 @@
     text-decoration: none;
     color: orangered;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 2rem;
   }
   span {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   p {
     margin: 0;
@@ -144,4 +147,47 @@
 .texExperience {
   color: orangered;
   font-size: 1.5rem;
+}
+.swipeIconUPdOW {
+  box-sizing: border-box;
+  border: solid 4px rgb(252, 252, 252);
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  bottom: 16px;
+  height: 35px;
+  width: 20px;
+  border-radius: 30px;
+  opacity: 0.25;
+}
+
+.swipeIconUPdOW::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: rgb(252, 252, 252);
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  border-radius: 100%;
+  animation: mouse 2s infinite;
+}
+
+@keyframes mouse {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  80% {
+    transform: translateY(1px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(1px);
+    opacity: 0;
+  }
 }

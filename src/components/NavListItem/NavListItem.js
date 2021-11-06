@@ -1,6 +1,5 @@
 // import ClassName from 'models/classname';
 // import styles from './NavListItem.module.scss';
-import Link from 'next/link';
 
 const NavListItem = ({ className, item }) => {
   const nestedItems = (item.children || []).map((item) => {
@@ -9,10 +8,11 @@ const NavListItem = ({ className, item }) => {
 
   return (
     <li key={item.id}>
+      {console.log(item.path)}
       {!item.path.includes('http') && !item.target && (
-        <Link href={item.path}>
-          <a title={item.title}>{item.label}</a>
-        </Link>
+        <a href={item.path === '/inicio/' ? '/' : item.path} title={item.title}>
+          {item.label}
+        </a>
       )}
       {item.path.includes('http') && (
         <a href={item.path} title={item.title} target={item.target}>

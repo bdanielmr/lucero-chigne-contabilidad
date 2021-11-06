@@ -1,5 +1,14 @@
 @import "styles/settings/__settings";
-
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@-webkit-keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
 .nav {
   width: 80%;
 
@@ -158,7 +167,18 @@
 .CustomOpenMenuComponent {
   background: red;
 }
-
+.logoStyle {
+  color: orangered;
+  font: bold 100% Consolas, Monaco, monospace;
+  border-right: 0.1em solid rgb(245, 57, 0);
+  width: 16.5em;
+  width: 44ch;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 2s steps(21, end), blink-caret 0.5s step-end infinite alternate;
+}
 .navSearchResults {
   display: none;
   position: absolute;

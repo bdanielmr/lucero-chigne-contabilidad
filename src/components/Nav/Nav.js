@@ -19,6 +19,7 @@ const SEARCH_VISIBLE = 'visible';
 const SEARCH_HIDDEN = 'hidden';
 
 const Nav = () => {
+  const [showMenu, setShowMenu] = useState(false);
   const formRef = useRef();
 
   const [searchVisibility, setSearchVisibility] = useState(SEARCH_HIDDEN);
@@ -181,15 +182,14 @@ const Nav = () => {
 
   const handleButton = () => {
     setButtonVisibility(!buttonVisibility);
+    setShowMenu(!showMenu);
   };
 
   return (
     <nav className={styles.nav}>
       <Section className={styles.navSection}>
-        <div style={{ marginLeft: '80px' }} className={styles.navSectionSocial}>
-          <a>
-            <RiInstagramLine />
-          </a>
+        <div className={styles.navSectionSocial}>
+          <h1 className={styles.logoStyle}>Lucero Chigne, contabilidad para freelancers</h1>
         </div>
 
         {/**        <ul className={styles.navMenu}>
@@ -201,6 +201,7 @@ const Nav = () => {
         <div className={styles.searchButtonContainer}>
           <button onClick={handleButton} className={styles.searchButton} disabled={!searchIsLoaded}>
             <span>MENU</span>
+
             <CustomOpenMenu className={styles.CustomOpenMenuComponent} navigation={navigation} />
           </button>
 

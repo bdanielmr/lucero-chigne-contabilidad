@@ -65,8 +65,9 @@ const Layout = ({ children }) => {
       <div className={styles.layoutContainerCenter}>
         <Nav />
       </div>
-
-      <Main>{children}</Main>
+      <div className={styles.mainContainerCenter}>
+        <Main>{children}</Main>
+      </div>
     </div>
   );
 };

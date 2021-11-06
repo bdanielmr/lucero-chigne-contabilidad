@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './customOpenMenu.module.scss';
 import NavListItem from 'components/NavListItem';
 
-const CustomOpenMenu = ({ navigation }) => {
+const CustomOpenMenu = ({ navigation, showMenu }) => {
   return (
     <label className={styles.labelMenuOpen}>
       <input className={styles.inputMenuOpen} type="checkbox" />
@@ -13,7 +13,7 @@ const CustomOpenMenu = ({ navigation }) => {
       </span>
 
       <ul className={styles.ulMenuOpen}>
-        <p className={styles.aMenuOpen} href="#">
+        <p className={styles.aMenuOpen}>
           {navigation?.map((listItem) => {
             return <NavListItem key={listItem.id} item={listItem} />;
           })}

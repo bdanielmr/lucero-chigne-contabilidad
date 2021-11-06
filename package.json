@@ -41,10 +41,13 @@
     "react-dom": "17.0.2",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
+    "react-responsive-carousel": "^3.2.22",
     "react-rough-notation": "^1.0.1",
+    "react-slick": "^0.28.1",
     "rough-notation": "^0.5.1",
     "rss": "^1.2.2",
     "sass": "^1.39.0",
+    "slick-carousel": "^1.8.1",
     "style.css": "^1.0.0"
   },
   "devDependencies": {
