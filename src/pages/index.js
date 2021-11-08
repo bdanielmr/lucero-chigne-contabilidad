@@ -13,10 +13,11 @@ import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination';
 import { VscGraph } from 'react-icons/vsc';
 
-import { AiFillReconciliation, AiOutlineFileSearch, AiOutlineGlobal } from 'react-icons/ai';
-import { FaUsers } from 'react-icons/fa';
+import { AiFillReconciliation, AiFillMail, AiOutlineFileSearch, AiOutlineGlobal } from 'react-icons/ai';
+
 import { GoArrowUp, GoArrowDown } from 'react-icons/go';
-import { MdAccountBalance } from 'react-icons/md';
+import { MdAccountBalance, MdSmartphone } from 'react-icons/md';
+import { FaUsers, FaMapPin } from 'react-icons/fa';
 import styles from 'styles/pages/Home.module.scss';
 import FeaturedImage from 'components/FeaturedImage';
 import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
@@ -88,7 +89,7 @@ export default function Home({ posts, pagination, pageHome }) {
                   Sobre Mi{' '}
                 </RoughNotation>
               </p>
-              <a href="#" className={styles.swipeIconUPdOW}>
+              <a className={styles.swipeIconUPdOW}>
                 <div
                   style={{
                     display: 'flex',
@@ -115,6 +116,7 @@ export default function Home({ posts, pagination, pageHome }) {
                 showIndicators={false}
                 axis="vertical"
                 useKeyboardArrows={true}
+                style={{ cursor: 'pointer' }}
               >
                 <div
                   style={{
@@ -125,6 +127,7 @@ export default function Home({ posts, pagination, pageHome }) {
                     justifyContent: 'center',
                     height: '60vh',
                     width: '100%',
+                    cursor: 'n-resize;',
                   }}
                 >
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
@@ -165,6 +168,7 @@ export default function Home({ posts, pagination, pageHome }) {
                     justifyContent: 'center',
                     height: '60vh',
                     width: '100%',
+                    cursor: 'n-resize;',
                   }}
                 >
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
@@ -195,6 +199,7 @@ export default function Home({ posts, pagination, pageHome }) {
                     justifyContent: 'center',
                     height: '60vh',
                     width: '100%',
+                    cursor: 'n-resize;',
                   }}
                 >
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
@@ -245,35 +250,167 @@ export default function Home({ posts, pagination, pageHome }) {
                     justifyContent: 'center',
                   }}
                 >
-                  <div style={{ flex: '0 32%', height: '100px', marginBottom0: '2%' }}>
-                    <MdAccountBalance style={{ fontSize: '50px' }} color="orange" />
+                  <div style={{ flex: '0 32%', height: '150px', marginBottom0: '2%' }}>
+                    <p
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        margin: '0',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <MdAccountBalance style={{ fontSize: '50px' }} color="orange" />
+                      Constitución de Empresass
+                    </p>
                   </div>
 
                   <div style={{ flex: '0 32%', height: '100px', marginBottom0: '2%' }}>
-                    <VscGraph style={{ fontSize: '50px' }} color="orange" />
+                    <p
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        margin: '0',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <VscGraph style={{ fontSize: '50px' }} color="orange" />
+                      Outsourcing Contable
+                    </p>
                   </div>
                   <div style={{ flex: '0 32%', height: '100px', marginBottom0: '2%' }}>
-                    <AiFillReconciliation style={{ fontSize: '50px' }} color="orange" />
+                    <p
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        margin: '0',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <AiFillReconciliation style={{ fontSize: '50px' }} color="orange" />
+                      Planeación Tributaria
+                    </p>
                   </div>
                   <div style={{ flex: '0 32%', height: '100px', marginBottom0: '2%' }}>
-                    <AiOutlineFileSearch style={{ fontSize: '50px' }} color="orange" />
+                    <p
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        margin: '0',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <AiOutlineFileSearch style={{ fontSize: '50px' }} color="orange" />
+                      Asesoramiento Tributario
+                    </p>
                   </div>
                   <div style={{ flex: '0 32%', height: '100px', marginBottom0: '2%' }}>
-                    <FaUsers style={{ fontSize: '50px' }} color="orange" />
+                    <p
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        margin: '0',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <FaUsers style={{ fontSize: '50px' }} color="orange" />
+                      Asesoramiento Laboral
+                    </p>
                   </div>
                   <div style={{ flex: '0 32%', height: '100px', marginBottom0: '2%' }}>
-                    <AiOutlineGlobal style={{ fontSize: '50px' }} color="orange" />
+                    <p
+                      style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        margin: '0',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <AiOutlineGlobal style={{ fontSize: '50px' }} color="orange" />
+                      Asesoramiento Aduanero
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div style={{ marginRight: '0s%' }}>
-              <p style={{ margin: '0', fontSize: '2rem', color: 'white' }}>
-                <RoughNotation color="orangered" type="highlight" show={true}>
-                  Contacto{' '}
-                </RoughNotation>
-              </p>
+            <div>
+              <div className={styles.containerPost}>
+                <p style={{ margin: '1% 0px 0px 0px', fontSize: '2rem', color: 'white' }}>
+                  <RoughNotation color="orangered" type="highlight" show={true}>
+                    Contacto{' '}
+                  </RoughNotation>
+                </p>
+
+                <p>
+                  P<span style={{ color: 'white' }}>{'uedo '}</span>
+                  hacer mucho por tí
+                </p>
+
+                <p>
+                  si quieres trabajar{' '}
+                  <RoughNotation color="orange" type="circle" show={true}>
+                    conmigo
+                  </RoughNotation>
+                </p>
+                <p>puedes contactarme :</p>
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    color: 'white',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: '100%',
+                    height: '30vh',
+                    fontSize: '13px',
+                  }}
+                >
+                  <p
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      margin: '0',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <FaMapPin style={{ fontSize: '20px' }} color="orange" />
+                    Trujillo - Peru
+                  </p>
+                  <p
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      margin: '0',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <MdSmartphone style={{ fontSize: '20px' }} color="orange" />
+                    999 999 999
+                  </p>{' '}
+                  <p
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      margin: '0',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <MdSmartphone style={{ fontSize: '20px' }} color="orange" />
+                    044 995 454
+                  </p>
+                  <p
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'row',
+                      margin: '0',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <AiFillMail style={{ fontSize: '20px' }} color="orange" />
+                    l.chigne.m@gmail.coms
+                  </p>
+                </div>
+              </div>
             </div>
           </Carousel>
           {false && (
