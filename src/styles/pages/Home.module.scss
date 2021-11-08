@@ -160,6 +160,9 @@
   width: 20px;
   border-radius: 30px;
   opacity: 0.25;
+  @media (max-width: 700px) {
+    display: none;
+  }
 }
 
 .swipeIconUPdOW::before {
@@ -173,7 +176,33 @@
   border-radius: 100%;
   animation: mouse 1s infinite;
 }
+.sectionPostOnlyDesk {
+  padding: "50px 0px 0px 0px";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+.containerPostOnlyDesk {
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+.containerPostOnlyMobile {
+  height: 75vh;
+  color: white;
+  font-size: 16px;
+  position: relative;
+  span {
+    font-size: 16px;
+  }
 
+  @media (min-width: 700px) {
+    display: none;
+  }
+}
 @keyframes mouse {
   0% {
     transform: none;
