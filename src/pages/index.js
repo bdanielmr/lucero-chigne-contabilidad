@@ -43,7 +43,7 @@ export default function Home({ posts, pagination, pageHome }) {
           }}
         >
           <Carousel swipeable={false} emulateTouch={true} showStatus={false}>
-            <div style={{ marginRight: '5%' }} className={styles.containerPost}>
+            <div style={{ marginRight: '1%' }} className={styles.containerPost}>
               <p style={{ margin: '0', fontSize: '2rem', color: 'white' }}>
                 <RoughNotation color="orangered" type="highlight" show={true}>
                   Profesional{' '}
@@ -55,12 +55,7 @@ export default function Home({ posts, pagination, pageHome }) {
                 contabilidad
                 {' con asesoramiento'}
               </p>
-              <p style={{ fontSize: '2rem', fontStyle: 'italic' }}>
-                (a medida)
-                <span style={{ position: 'absolute', marginLeft: '20%', marginTop: '1%' }}>
-                  <Backpack size={130} mood="blissful" color="#596881" />
-                </span>
-              </p>
+              <p style={{ fontSize: '2rem', fontStyle: 'italic' }}>(a medida)</p>
               <p>
                 Orientacion &{' '}
                 <RoughNotation color="orange" type="circle" show={true}>
