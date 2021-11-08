@@ -33,7 +33,7 @@ export default function Home({ posts, pagination, pageHome }) {
   return (
     <>
       <Layout>
-        <Section style={{ position: 'relative', left: '10%', width: '80%' }}>
+        <Section>
           <Carousel swipeable={false} emulateTouch={true} showStatus={false}>
             <div className={styles.containerPostOnlyMobile}>
               <p>
