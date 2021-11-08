@@ -87,7 +87,24 @@ export default function Home({ posts, pagination, pageHome }) {
                   Sobre Mi{' '}
                 </RoughNotation>
               </p>
-              <a href="#" className={styles.swipeIconUPdOW}></a>
+              <a href="#" className={styles.swipeIconUPdOW}>
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: '99px',
+                    position: 'absolute',
+                    bottom: '-35px',
+                    left: '-5px',
+                    justifyContent: 'space-between',
+                    fontSize: '26px',
+                    color: 'white',
+                  }}
+                >
+                  <span>🡅</span>
+                  <span>🡇</span>
+                </div>
+              </a>
               <Carousel
                 swipeable
                 swipeScrollTolerance={2}
