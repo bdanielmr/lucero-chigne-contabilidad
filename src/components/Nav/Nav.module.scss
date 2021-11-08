@@ -360,8 +360,11 @@
     font-size: 1.5rem;
     white-space: nowrap;
     overflow: hidden;
-    color: rgba(202, 61, 21, 1);
+    color: orangered;
     font-weight: 600;
+  }
+  @media (min-width: 800px) {
+    display: none;
   }
 }
 .css-typing p:nth-child(1) {

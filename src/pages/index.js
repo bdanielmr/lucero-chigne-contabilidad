@@ -13,11 +13,16 @@ import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination';
 import { VscGraph } from 'react-icons/vsc';
 
-import { AiFillReconciliation, AiFillMail, AiOutlineFileSearch, AiOutlineGlobal } from 'react-icons/ai';
+import { AiFillReconciliation, AiFillPhone, AiOutlineFileSearch, AiOutlineGlobal } from 'react-icons/ai';
 
 import { GoArrowUp, GoArrowDown } from 'react-icons/go';
-import { MdAccountBalance, MdSmartphone } from 'react-icons/md';
+import { MdAccountBalance, MdSmartphone, MdTimer } from 'react-icons/md';
 import { FaUsers, FaMapPin } from 'react-icons/fa';
+import { IoLocationSharp } from 'react-icons/io5';
+import { FiMail, FiSmartphone } from 'react-icons/fi';
+
+import { BiHeart } from 'react-icons/bi';
+import { ImEarth } from 'react-icons/im';
 import styles from 'styles/pages/Home.module.scss';
 import FeaturedImage from 'components/FeaturedImage';
 import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
@@ -33,7 +38,7 @@ export default function Home({ posts, pagination, pageHome }) {
   return (
     <>
       <Layout>
-        <Section>
+        <Section className={styles.sectionPostOnlyMobile}>
           <Carousel swipeable={false} emulateTouch={true} showStatus={false}>
             <div className={styles.containerPostOnlyMobile}>
               <p>
@@ -647,71 +652,193 @@ export default function Home({ posts, pagination, pageHome }) {
                 <div
                   style={{
                     display: 'flex',
-                    flexDirection: 'column',
-                    color: 'white',
                     alignItems: 'center',
-                    justifyContent: 'center',
                     width: '100%',
-                    height: '30vh',
                     fontSize: '13px',
+                    position: 'absolute',
+                    justifyContent: 'center',
+                    bottom: '30%',
                   }}
                 >
-                  <p
+                  <div
                     style={{
                       display: 'flex',
-                      flexDirection: 'row',
-                      margin: '0',
                       alignItems: 'center',
+                      width: '65%',
+                      fontSize: '13px',
+                      position: 'absolute',
+                      justifyContent: 'space-between',
                     }}
                   >
-                    <FaMapPin style={{ fontSize: '20px' }} color="orange" />
-                    Trujillo - Peru
-                  </p>
-                  <p
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      margin: '0',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <MdSmartphone style={{ fontSize: '20px' }} color="orange" />
-                    999 999 999
-                  </p>{' '}
-                  <p
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      margin: '0',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <MdSmartphone style={{ fontSize: '20px' }} color="orange" />
-                    044 995 454
-                  </p>
-                  <p
-                    style={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      margin: '0',
-                      alignItems: 'center',
-                    }}
-                  >
-                    <AiFillMail style={{ fontSize: '20px' }} color="orange" />
-                    l.chigne.m@gmail.coms
-                  </p>
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        flexDirection: 'column',
+                      }}
+                    >
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          height: '40px',
+                          width: '40px',
+                          background: 'white',
+                          borderRadius: '50%',
+                          opacity: '0.2',
+                        }}
+                      >
+                        <IoLocationSharp color="black" />
+                      </div>
+                      <p
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          fontSize: '13px',
+                          margin: '0',
+                          lineHeight: '20px',
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontSize: '16px',
+                            margin: '15px',
+                          }}
+                        >
+                          Trujillo - Perú
+                        </span>
+                      </p>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          height: '40px',
+                          width: '40px',
+                          background: 'white',
+                          borderRadius: '50%',
+                          opacity: '0.2',
+                        }}
+                      >
+                        <FiMail color="black" />
+                      </div>
+                      <p
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          fontSize: '13px',
+                          margin: '0',
+                          lineHeight: '20px',
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontSize: '16px',
+                            margin: '15px',
+                          }}
+                        >
+                          l.chigne.m@gmail.com
+                        </span>
+                      </p>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          height: '40px',
+                          width: '40px',
+                          background: 'white',
+                          borderRadius: '50%',
+                          opacity: '0.2',
+                        }}
+                      >
+                        <AiFillPhone color="black" />
+                      </div>
+                      <p
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          fontSize: '13px',
+                          margin: '0',
+                          lineHeight: '20px',
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontSize: '16px',
+                            margin: '15px',
+                          }}
+                        >
+                          044 12 12 12
+                        </span>
+                      </p>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          height: '40px',
+                          width: '40px',
+                          background: 'white',
+                          borderRadius: '50%',
+                          opacity: '0.2',
+                        }}
+                      >
+                        <FiSmartphone color="black" />
+                      </div>
+                      <p
+                        style={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          fontSize: '13px',
+                          margin: '0',
+                          lineHeight: '20px',
+                        }}
+                      >
+                        <span style={{ fontSize: '16px', margin: '15px' }}>+51 999 999 999</span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </Carousel>
-          {false && (
-            <Pagination
-              addCanonical={false}
-              currentPage={pagination?.currentPage}
-              pagesCount={pagination?.pagesCount}
-              basePath={pagination?.basePath}
-            />
-          )}
+          <div className={styles.containerIconsHome}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <MdTimer color="orange" />
+              <p
+                style={{ display: 'flex', flexDirection: 'column', fontSize: '13px', margin: '0', lineHeight: '20px' }}
+              >
+                <span>Atencion al Cliente</span>
+                <span style={{ fontSize: '20px' }}>365</span>
+              </p>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <BiHeart color="orange" />
+              <p
+                style={{ display: 'flex', flexDirection: 'column', fontSize: '13px', margin: '0', lineHeight: '20px' }}
+              >
+                <span>Clientes Satisfechos</span>
+                <span style={{ fontSize: '20px' }}>645+</span>
+              </p>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <ImEarth color="orange" />
+              <p
+                style={{ display: 'flex', flexDirection: 'column', fontSize: '13px', margin: '0', lineHeight: '20px' }}
+              >
+                <span>Empresa verde</span>
+                <span style={{ fontSize: '20px' }}>100%</span>
+              </p>
+            </div>
+          </div>
         </Section>
       </Layout>
     </>
