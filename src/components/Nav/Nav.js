@@ -191,7 +191,11 @@ const Nav = () => {
         <div className={styles.navSectionSocial}>
           <h1 className={styles.logoStyle}>Lucero Chigne, contabilidad para freelancers</h1>
         </div>
-
+        <div className={styles['css-typing']}>
+          <p>Lucero Chigne</p>
+          <p>contabilidad para </p>
+          <p>freelancers</p>
+        </div>
         {/**        <ul className={styles.navMenu}>
           {navigation?.map((listItem) => {
             return <NavListItem key={listItem.id} className={styles.navSubMenu} item={listItem} />;
