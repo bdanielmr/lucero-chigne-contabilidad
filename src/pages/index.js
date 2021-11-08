@@ -15,6 +15,7 @@ import { VscGraph } from 'react-icons/vsc';
 
 import { AiFillReconciliation, AiOutlineFileSearch, AiOutlineGlobal } from 'react-icons/ai';
 import { FaUsers } from 'react-icons/fa';
+import { GoArrowUp, GoArrowDown } from 'react-icons/go';
 import { MdAccountBalance } from 'react-icons/md';
 import styles from 'styles/pages/Home.module.scss';
 import FeaturedImage from 'components/FeaturedImage';
@@ -92,17 +93,17 @@ export default function Home({ posts, pagination, pageHome }) {
                   style={{
                     display: 'flex',
                     flexDirection: 'column',
-                    height: '99px',
+                    height: '67px',
                     position: 'absolute',
-                    bottom: '-35px',
+                    bottom: '-20px',
                     left: '-5px',
                     justifyContent: 'space-between',
-                    fontSize: '26px',
+                    fontSize: '22px',
                     color: 'white',
                   }}
                 >
-                  <span>🡅</span>
-                  <span>🡇</span>
+                  <GoArrowUp />
+                  <GoArrowDown />
                 </div>
               </a>
               <Carousel
