@@ -264,7 +264,7 @@ export default function Home({ posts, pagination, pageHome }) {
                     </p>
                   </div>
                   <a
-                    href="/servicios/planeacion-tributaria/"
+                    href="/planeacion-tributaria/"
                     style={{ flex: '0 40%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
                   >
                     <p
@@ -572,7 +572,7 @@ export default function Home({ posts, pagination, pageHome }) {
                     justifyContent: 'center',
                   }}
                 >
-                  <Link href="/servicios/constitucion-de-empresas/">
+                  <Link href="/constitucion-de-empresas/">
                     <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                       <p
                         style={{
@@ -588,7 +588,7 @@ export default function Home({ posts, pagination, pageHome }) {
                     </a>
                   </Link>
 
-                  <Link href="/servicios/outsourcing-contable/">
+                  <Link href="/outsourcing-contable/">
                     <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                       <p
                         style={{
@@ -603,7 +603,7 @@ export default function Home({ posts, pagination, pageHome }) {
                       </p>
                     </a>
                   </Link>
-                  <Link href="/servicios/planeacion-tributaria/">
+                  <Link href="/planeacion-tributaria/">
                     <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                       <p
                         style={{
@@ -618,7 +618,7 @@ export default function Home({ posts, pagination, pageHome }) {
                       </p>
                     </a>
                   </Link>
-                  <Link href="/servicios/asesoramiento-tributario/">
+                  <Link href="/asesoramiento-tributario/">
                     <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                       <p
                         style={{
@@ -633,7 +633,7 @@ export default function Home({ posts, pagination, pageHome }) {
                       </p>
                     </a>
                   </Link>
-                  <Link href="/servicios/asesoramiento-laboral/">
+                  <Link href="/asesoramiento-laboral/">
                     <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                       <p
                         style={{
@@ -648,7 +648,7 @@ export default function Home({ posts, pagination, pageHome }) {
                       </p>
                     </a>
                   </Link>
-                  <Link href="/servicios/asesoramiento-aduanero/">
+                  <Link href="/asesoramiento-aduanero/">
                     <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                       <p
                         style={{

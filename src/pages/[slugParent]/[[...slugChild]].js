@@ -243,7 +243,7 @@ export default function Page({ page, breadcrumbs }) {
                 height: '30%',
               }}
             >
-              <Link href="/servicios/constitucion-de-empresas/">
+              <Link href="/constitucion-de-empresas/">
                 <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                   <p
                     style={{
@@ -259,7 +259,7 @@ export default function Page({ page, breadcrumbs }) {
                 </a>
               </Link>
 
-              <Link href="/servicios/outsourcing-contable/">
+              <Link href="/outsourcing-contable/">
                 <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                   <p
                     style={{
@@ -274,7 +274,7 @@ export default function Page({ page, breadcrumbs }) {
                   </p>
                 </a>
               </Link>
-              <Link href="/servicios/planeacion-tributaria/">
+              <Link href="/planeacion-tributaria/">
                 <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                   <p
                     style={{
@@ -290,7 +290,7 @@ export default function Page({ page, breadcrumbs }) {
                 </a>
               </Link>
 
-              <Link href="/servicios/asesoramiento-tributario/">
+              <Link href="/asesoramiento-tributario/">
                 <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                   <p
                     style={{
@@ -305,7 +305,7 @@ export default function Page({ page, breadcrumbs }) {
                   </p>
                 </a>
               </Link>
-              <Link href="/servicios/asesoramiento-laboral/">
+              <Link href="/asesoramiento-laboral/">
                 <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                   <p
                     style={{
@@ -320,7 +320,7 @@ export default function Page({ page, breadcrumbs }) {
                   </p>
                 </a>
               </Link>
-              <Link href="/servicios/asesoramiento-aduanero/">
+              <Link href="/asesoramiento-aduanero/">
                 <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
                   <p
                     style={{
