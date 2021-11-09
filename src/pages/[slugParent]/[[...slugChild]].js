@@ -26,6 +26,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import stylesPage from 'styles/pages/Page.module.scss';
 import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
+import CardBlog from 'components/CardBlog/CardBlog';
 export default function Page({ page, breadcrumbs }) {
   const { title, metaTitle, description, slug, content, featuredImage, children } = page;
 
@@ -321,6 +322,17 @@ export default function Page({ page, breadcrumbs }) {
               </div>
             </div>
           </div>
+        </div>
+      )}
+      {title === 'Blog' && (
+        <div className={styles.containerPost}>
+          <p style={{ margin: '1% 0px 0px 0px', fontSize: '2rem', color: 'white', textAlign: 'center' }}>
+            <RoughNotation color="orangered" type="highlight" show={true}>
+              Blog{' '}
+            </RoughNotation>
+          </p>
+
+          <CardBlog />
         </div>
       )}
       {title === 'Contacto' && (

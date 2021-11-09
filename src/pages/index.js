@@ -116,14 +116,14 @@ export default function Home({ posts, pagination, pageHome }) {
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>empresaria y diseñadora gráfica</p>
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>con experiencia en temas</p>
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
-                    <RoughNotation color="orangered" type="circle" show={true}>
+                    <RoughNotation color="orangered" type="underline" show={true}>
                       {' '}
                       tributarios{' '}
                     </RoughNotation>
-                    <RoughNotation color="orange" type="circle" show={true}>
+                    <RoughNotation color="orange" type="underline" show={true}>
                       ,logísticos,
                     </RoughNotation>
-                    <RoughNotation color="orangered" type="circle" show={true}>
+                    <RoughNotation color="orangered" type="underline" show={true}>
                       {' '}
                       financieros y{' '}
                     </RoughNotation>
@@ -431,14 +431,14 @@ export default function Home({ posts, pagination, pageHome }) {
                   </p>
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
                     con experiencia en temas
-                    <RoughNotation color="orangered" type="circle" show={true}>
+                    <RoughNotation color="orangered" type="underline" show={true}>
                       {' '}
                       tributarios{' '}
                     </RoughNotation>
-                    <RoughNotation color="orange" type="circle" show={true}>
+                    <RoughNotation color="orange" type="underline" show={true}>
                       ,logísticos,
                     </RoughNotation>
-                    <RoughNotation color="orangered" type="circle" show={true}>
+                    <RoughNotation color="orangered" type="underline" show={true}>
                       {' '}
                       financieros y{' '}
                     </RoughNotation>
@@ -451,9 +451,10 @@ export default function Home({ posts, pagination, pageHome }) {
                   </p>
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
                     <RoughNotation color="orange" type="box" show={true}>
-                      inversiones digitales, entre otros
+                      inversiones digitales,
                     </RoughNotation>
                   </p>
+                  <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>entre otros</p>
                 </div>
                 <div
                   style={{
@@ -468,12 +469,16 @@ export default function Home({ posts, pagination, pageHome }) {
                   }}
                 >
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
-                    En este espacio busco asesorarte y diseñar un plan estratégico{' '}
+                    En este espacio busco
+                    <RoughNotation color="orange" type="underline" show={true}>
+                      {' '}
+                      asesorarte{' '}
+                    </RoughNotation>
+                    y diseñar un plan estratégico{' '}
                   </p>
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
-                    para que puedas gestionar tus ,
-                    <RoughNotation color="orangered" type="circle" show={true}>
-                      {' '}
+                    para que puedas gestionar tus,{' '}
+                    <RoughNotation brackets={['left', 'right']} color="orangered" type="bracket" show={true}>
                       finanzas,
                     </RoughNotation>
                     {' mantener un '}
@@ -483,7 +488,12 @@ export default function Home({ posts, pagination, pageHome }) {
                     evitar inconvenientes con las instituciones del Estado
                   </p>
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
-                    y prevenir sanciones, multas o embargos.
+                    y
+                    <RoughNotation color="orange" type="box" show={true}>
+                      {' '}
+                      prevenir sanciones,{' '}
+                    </RoughNotation>
+                    multas o embargos.
                   </p>
                 </div>
                 <div
@@ -501,7 +511,18 @@ export default function Home({ posts, pagination, pageHome }) {
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
                     Entiendo que el mundo es amplio, la tecnología no para,{' '}
                   </p>
-                  <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>ni las inversiones ni el internet.</p>
+                  <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
+                    ni las
+                    <RoughNotation color="orange" type="underline" show={true}>
+                      {' '}
+                      inversiones{' '}
+                    </RoughNotation>
+                    ni el
+                    <RoughNotation color="yellow" type="underline" show={true}>
+                      {' '}
+                      internet.
+                    </RoughNotation>
+                  </p>
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
                     Mientras estás leyendo esto, todos siguen operando;
                   </p>
@@ -512,7 +533,9 @@ export default function Home({ posts, pagination, pageHome }) {
                     así que mi intención es que puedas construir tu futuro sin temor
                   </p>
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
-                    Te ofrezco brindarte un asesoramiento a medida,
+                    <RoughNotation brackets={['left', 'right']} color="orangered" type="bracket" show={true}>
+                      Te ofrezco brindarte un asesoramiento a medida,
+                    </RoughNotation>
                   </p>
                   <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
                     orientación y recomendaciones personalizadas
@@ -657,14 +680,14 @@ export default function Home({ posts, pagination, pageHome }) {
                     fontSize: '13px',
                     position: 'absolute',
                     justifyContent: 'center',
-                    bottom: '30%',
+                    bottom: '44%',
                   }}
                 >
                   <div
                     style={{
                       display: 'flex',
                       alignItems: 'center',
-                      width: '65%',
+                      width: '70%',
                       fontSize: '13px',
                       position: 'absolute',
                       justifyContent: 'space-between',

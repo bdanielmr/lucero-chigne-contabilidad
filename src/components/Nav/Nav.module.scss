@@ -156,7 +156,7 @@
     font-weight: 600;
     font-size: 0.5em;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 700px) {
     display: none;
   }
 }
@@ -170,7 +170,7 @@
     font-size: 1.5em;
     color: rgba(202, 61, 21, 1);
   }
-  @media (max-width: 800px) {
+  @media (max-width: 700px) {
     display: none;
   }
 }
@@ -187,7 +187,7 @@
   -webkit-animation: typing 2s steps(21, end), blink-caret 0.5s step-end infinite alternate;
 }
 .navSectionSocialMobile {
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     display: none;
   }
 }
@@ -306,9 +306,6 @@
     }
   }
   .searchButtonContainer {
-    @media (min-width: 480px) {
-      display: none;
-    }
   }
   .navSubMenu {
     display: none;
@@ -363,7 +360,7 @@
     color: orangered;
     font-weight: 600;
   }
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     display: none;
   }
 }
