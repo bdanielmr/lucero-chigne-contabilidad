@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import useSite from 'hooks/use-site';
 import { getPaginatedPosts } from 'lib/posts';
-
+import Link from 'next/link';
 import { getPageByUri } from 'lib/pages';
 import { WebsiteJsonLd } from 'lib/json-ld';
 import React, { useEffect, useState } from 'react';
@@ -572,7 +572,7 @@ export default function Home({ posts, pagination, pageHome }) {
                     justifyContent: 'center',
                   }}
                 >
-                  <a
+                  <Link
                     href="/servicios/constitucion-de-empresas/"
                     style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
                   >
@@ -587,9 +587,9 @@ export default function Home({ posts, pagination, pageHome }) {
                       <MdAccountBalance style={{ fontSize: '50px' }} color="orange" />
                       Constitución de Empresass
                     </p>
-                  </a>
+                  </Link>
 
-                  <a
+                  <Link
                     href="/servicios/outsourcing-contable/"
                     style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
                   >
@@ -604,7 +604,7 @@ export default function Home({ posts, pagination, pageHome }) {
                       <VscGraph style={{ fontSize: '50px' }} color="orange" />
                       Outsourcing Contable
                     </p>
-                  </a>
+                  </Link>
                   <a
                     href="/servicios/planeacion-tributaria/"
                     style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}

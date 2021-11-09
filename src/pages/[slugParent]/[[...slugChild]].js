@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 /* eslint-disable no-unused-vars */
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
@@ -242,7 +243,7 @@ export default function Page({ page, breadcrumbs }) {
                 height: '30%',
               }}
             >
-              <a
+              <Link
                 href="/servicios/constitucion-de-empresas/"
                 style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
               >
@@ -257,9 +258,9 @@ export default function Page({ page, breadcrumbs }) {
                   <MdAccountBalance style={{ fontSize: '50px' }} color="orange" />
                   Constitución de Empresas
                 </p>
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="/servicios/outsourcing-contable/"
                 style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
               >
@@ -274,7 +275,7 @@ export default function Page({ page, breadcrumbs }) {
                   <VscGraph style={{ fontSize: '50px' }} color="orange" />
                   Outsourcing Contable
                 </p>
-              </a>
+              </Link>
               <a
                 href="/servicios/planeacion-tributaria/"
                 style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
