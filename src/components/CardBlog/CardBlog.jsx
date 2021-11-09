@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { GoArrowUp, GoArrowDown } from 'react-icons/go';
-import styles from './CardBlog.module.scss';
+import styles from './cardBlog.module.scss';
 const CardBlog = (props) => {
   return (
     <>
