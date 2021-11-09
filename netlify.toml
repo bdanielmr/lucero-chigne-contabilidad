@@ -3,6 +3,6 @@
   to = "/404"
   status = 404
 [[redirects]]
-  from = "/*/*"
+  from = "/servicios/*"
   to = "/404"
   status = 404
