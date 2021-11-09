@@ -243,103 +243,98 @@ export default function Page({ page, breadcrumbs }) {
                 height: '30%',
               }}
             >
-              <Link
-                href="/servicios/constitucion-de-empresas/"
-                style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
-              >
-                <p
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    margin: '0',
-                    alignItems: 'center',
-                  }}
-                >
-                  <MdAccountBalance style={{ fontSize: '50px' }} color="orange" />
-                  Constitución de Empresas
-                </p>
+              <Link href="/servicios/constitucion-de-empresas/">
+                <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
+                  <p
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      margin: '0',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <MdAccountBalance style={{ fontSize: '50px' }} color="orange" />
+                    Constitución de Empresas
+                  </p>
+                </a>
               </Link>
 
-              <Link
-                href="/servicios/outsourcing-contable/"
-                style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
-              >
-                <p
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    margin: '0',
-                    alignItems: 'center',
-                  }}
-                >
-                  <VscGraph style={{ fontSize: '50px' }} color="orange" />
-                  Outsourcing Contable
-                </p>
+              <Link href="/servicios/outsourcing-contable/">
+                <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
+                  <p
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      margin: '0',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <VscGraph style={{ fontSize: '50px' }} color="orange" />
+                    Outsourcing Contable
+                  </p>
+                </a>
               </Link>
-              <a
-                href="/servicios/planeacion-tributaria/"
-                style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
-              >
-                <p
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    margin: '0',
-                    alignItems: 'center',
-                  }}
-                >
-                  <AiFillReconciliation style={{ fontSize: '50px' }} color="orange" />
-                  Planeación Tributaria
-                </p>
-              </a>
-              <a
-                href="/servicios/asesoramiento-tributario/"
-                style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
-              >
-                <p
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    margin: '0',
-                    alignItems: 'center',
-                  }}
-                >
-                  <AiOutlineFileSearch style={{ fontSize: '50px' }} color="orange" />
-                  Asesoramiento Tributario
-                </p>
-              </a>
-              <a
-                href="/servicios/asesoramiento-laboral/"
-                style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
-              >
-                <p
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    margin: '0',
-                    alignItems: 'center',
-                  }}
-                >
-                  <FaUsers style={{ fontSize: '50px' }} color="orange" />
-                  Asesoramiento Laboral
-                </p>
-              </a>
-              <a
-                href="/servicios/asesoramiento-aduanero/"
-                style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}
-              >
-                <p
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    margin: '0',
-                    alignItems: 'center',
-                  }}
-                >
-                  <AiOutlineGlobal style={{ fontSize: '50px' }} color="orange" />
-                  Asesoramiento Aduanero
-                </p>
-              </a>
+              <Link href="/servicios/planeacion-tributaria/">
+                <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
+                  <p
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      margin: '0',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <AiFillReconciliation style={{ fontSize: '50px' }} color="orange" />
+                    Planeación Tributaria
+                  </p>
+                </a>
+              </Link>
+
+              <Link href="/servicios/asesoramiento-tributario/">
+                <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
+                  <p
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      margin: '0',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <AiOutlineFileSearch style={{ fontSize: '50px' }} color="orange" />
+                    Asesoramiento Tributario
+                  </p>
+                </a>
+              </Link>
+              <Link href="/servicios/asesoramiento-laboral/">
+                <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
+                  <p
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      margin: '0',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <FaUsers style={{ fontSize: '50px' }} color="orange" />
+                    Asesoramiento Laboral
+                  </p>
+                </a>
+              </Link>
+              <Link href="/servicios/asesoramiento-aduanero/">
+                <a style={{ flex: '0 32%', height: '100px', marginBottom0: '2%', zIndex: '999999999999' }}>
+                  <p
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      margin: '0',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <AiOutlineGlobal style={{ fontSize: '50px' }} color="orange" />
+                    Asesoramiento Aduanero
+                  </p>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
