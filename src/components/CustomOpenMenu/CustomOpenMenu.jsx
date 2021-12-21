@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
@@ -7,18 +8,9 @@ import NavListItem from 'components/NavListItem';
 const CustomOpenMenu = ({ navigation, showMenu }) => {
   return (
     <label className={styles.labelMenuOpen}>
-      <input className={styles.inputMenuOpen} type="checkbox" />
-      <span className={styles.menu}>
-        <span className={styles.hamburger}></span>
-      </span>
-
-      <ul className={styles.ulMenuOpen}>
-        <p className={styles.aMenuOpen}>
-          {navigation?.map((listItem) => {
-            return <NavListItem key={listItem.id} item={listItem} />;
-          })}
-        </p>
-      </ul>
+      {navigation?.map((listItem) => {
+        return <NavListItem key={listItem.id} item={listItem} />;
+      })}
     </label>
   );
 };

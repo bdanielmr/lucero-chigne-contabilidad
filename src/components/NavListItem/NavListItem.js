@@ -7,7 +7,7 @@ const NavListItem = ({ className, item }) => {
   });
 
   return (
-    <li key={item.id}>
+    <>
       {console.log(item.path)}
       {!item.path.includes('http') && !item.target && (
         <a href={item.path === '/inicio/' ? '/' : item.path} title={item.title}>
@@ -21,7 +21,7 @@ const NavListItem = ({ className, item }) => {
       )}
 
       {nestedItems.length > 0 && <ul className={className}>{nestedItems}</ul>}
-    </li>
+    </>
   );
 };
 

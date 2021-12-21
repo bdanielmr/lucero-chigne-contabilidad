@@ -187,27 +187,15 @@ const Nav = () => {
 
   return (
     <nav className={styles.nav}>
-      <Section className={styles.navSection}>
-        <div className={styles.navSectionSocial}>
-          <h1 className={styles.logoStyle}>Lucero Chigne, contabilidad para freelancers</h1>
-        </div>
-        <div className={styles['css-typing']}>
-          <p>Lucero Chigne</p>
-          <p>contabilidad para </p>
-          <p>freelancers</p>
-        </div>
-        {/**        <ul className={styles.navMenu}>
+      {/**        <ul className={styles.navMenu}>
           {navigation?.map((listItem) => {
             return <NavListItem key={listItem.id} className={styles.navSubMenu} item={listItem} />;
           })}
         </ul> */}
 
-        <div className={styles.searchButtonContainer}>
-          <button onClick={handleButton} className={styles.searchButton} disabled={!searchIsLoaded}>
-            <CustomOpenMenu className={styles.CustomOpenMenuComponent} navigation={navigation} />
-          </button>
+      <CustomOpenMenu className={styles.CustomOpenMenuComponent} navigation={navigation} />
 
-          {/**
+      {/**
            * 
 
           searchVisibility === SEARCH_VISIBLE && (
@@ -244,8 +232,7 @@ const Nav = () => {
             </form>
           )
                    */}
-        </div>
-      </Section>
+
       <div className={styles.navBarLinks}>
         <div className={styles.navSubMenuLinksContainer}>
           {false &&

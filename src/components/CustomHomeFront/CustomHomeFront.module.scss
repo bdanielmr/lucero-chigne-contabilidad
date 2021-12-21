@@ -1,0 +1,33 @@
+.div-custom-home-main {
+  height: 70vh;
+  display: flex;
+  justify-content: space-between;
+  label {
+    display: flex;
+    flex: 1.2;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 100%;
+    }
+  }
+  div {
+    border-bottom-right-radius: 2%;
+    background: whitesmoke;
+    flex: 1;
+    box-shadow: rgba(228, 228, 228, 0.4) 0px 5px, rgba(199, 199, 199, 0.3) 0px 10px, rgba(216, 216, 216, 0.2) 0px 15px,
+      rgba(233, 225, 225, 0.1) 0px 20px, rgba(241, 218, 218, 0.05) 0px 25px;
+    height: 90%;
+    p {
+      position: relative;
+      right: 30%;
+      top: 30%;
+      a {
+        color: black;
+        background: #fc9c84;
+        font-size: 26px;
+      }
+    }
+  }
+}
