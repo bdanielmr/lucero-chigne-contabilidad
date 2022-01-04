@@ -1,0 +1,45 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.custom-attention-work {
+  width: 100%;
+  display: flex;
+  background: #ff9c84;
+  height: 15vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-attention-work-container {
+  width: 80%;
+  display: flex;
+
+  justify-content: space-between;
+}
+.custom-attention-work-container-item {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+}
+.heart-icon {
+}
+.heart-icon::before {
+  font-family: fontAwesome;
+  font-size: 22px;
+  content: "\f0ac";
+}
+.clock-icon {
+}
+.clock-icon::before {
+  font-family: fontAwesome;
+  font-size: 22px;
+  content: "\f017";
+}
+.corazon-icon {
+  &::before {
+    font-family: fontAwesome;
+    font-size: 22px;
+    content: "\f004";
+  }
+}

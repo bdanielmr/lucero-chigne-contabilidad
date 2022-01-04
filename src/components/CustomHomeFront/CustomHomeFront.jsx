@@ -13,6 +13,9 @@ const CustomHomeFront = (props) => {
         <p>
           <a>En este espacio busco asesorarte y diseñar un plan estrategico para que puedas gestionar tus finanzas.</a>
         </p>
+        <div className={styles['button-custom-info-personal']}>
+          <button>Ver mas</button>
+        </div>
       </div>
     </div>
   );

@@ -33,6 +33,12 @@ import HeaderMain from 'components/header_main/HeaderMain';
 import Nav from 'components/Nav';
 import CustomHomeFront from 'components/CustomHomeFront/CustomHomeFront';
 import CustomInfoPersonalHome from 'components/CustomInfoPersonalHome/CustomInfoPersonalHome';
+import CustomHomeServicios from 'components/CustomHomeServicios/CustomHomeServicios';
+import CustomExperienceComponent from 'components/CustomExperienceComponent/CustomExperienceComponent';
+import CustomAtencionWork from 'components/CustomAtencionWork/CustomAtencionWork';
+import CustomContactFeature from 'CustomContactFeature/CustomContactFeature';
+import CustomServiciosFeature from 'components/CustomServiciosFeature/CustomServiciosFeature';
+import CustomServiciosMoreFeature from 'components/CustomServiciosFeature/CustomServiciosMoreFeature';
 
 export default function Home({ posts, pagination, pageHome }) {
   const { metaTitle, slug, content, featuredImage, children } = pageHome;
@@ -46,6 +52,12 @@ export default function Home({ posts, pagination, pageHome }) {
       <Nav />
       <CustomHomeFront />
       <CustomInfoPersonalHome />
+      <CustomHomeServicios />
+      <CustomExperienceComponent />
+      <CustomAtencionWork />
+      <CustomContactFeature />
+      <CustomServiciosFeature />
+      <CustomServiciosMoreFeature />
     </>
   );
 }
