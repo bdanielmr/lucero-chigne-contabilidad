@@ -29,7 +29,7 @@ const CustomInfoPersonalHome = (props) => {
           <img src="https://i.imgur.com/4K4Ubdo.png" width="100%" height="55px" />
         </div>
 
-        <img src="https://i.imgur.com/2tvIqhj.png" height="100%" />
+        <img src="https://i.imgur.com/2tvIqhj.png" style={{ 'object-fit': 'contain' }} width="100%" />
       </div>
     </div>
   );
