@@ -4,6 +4,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './CustomHomeServicios.module.scss';
+import { Link, animateScroll as scroll } from 'react-scroll';
 const CustomHomeServicios = (props) => {
   const cardOption = [
     {
@@ -15,6 +16,7 @@ creación de personas jurídicas
 (empresas, sociedades....
        `,
       button: 'ver mas',
+      path: '/constitucion-empresas/',
     },
     {
       img: 'https://i.imgur.com/4PpanS8.png',
@@ -25,6 +27,7 @@ creación de personas jurídicas
       operaciones (compras, gastos y
       ventas) Archivo de documentación física....`,
       button: 'ver mas',
+      path: '/outsourcing-contable/',
     },
     {
       img: 'https://i.imgur.com/dnVoT8r.png',
@@ -34,6 +37,7 @@ creación de personas jurídicas
 situación actual y elaboro la planificación de los impuestos a
 pagar...`,
       button: 'ver mas',
+      path: '/planeacion-tributaria/',
     },
     {
       img: 'https://i.imgur.com/BgL90Ds.png',
@@ -41,6 +45,7 @@ pagar...`,
       info: `Ante cualquier duda en temas de
       SUNAT...`,
       button: 'ver mas',
+      path: '/asesoramiento-tributario/',
     },
     {
       img: 'https://i.imgur.com/f8Pah0Y.png',
@@ -48,6 +53,7 @@ pagar...`,
       info: ` 
       En este rubro ofrezco el asesoramiento relacionado a temas de planillas...`,
       button: 'ver mas',
+      path: '/asesoramiento-laboral/',
     },
     {
       img: 'https://i.imgur.com/6vy6JGh.png',
@@ -56,6 +62,7 @@ pagar...`,
       Si estás interesado en importar o
       exportar mercancía...`,
       button: 'ver mas',
+      path: '/asesoramiento-aduanero/',
     },
   ];
   return (
@@ -76,7 +83,9 @@ pagar...`,
               <img src={card.img} />
               <p>{card.tittle}</p>
               <span>{card.info}</span>
-              <button>ver mas</button>
+              <Link activeClass="active" to={card.path} spy={true} smooth={true} offset={-70} duration={500}>
+                <button>ver mas</button>
+              </Link>
             </div>
           );
         })}

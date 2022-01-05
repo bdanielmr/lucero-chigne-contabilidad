@@ -39,6 +39,7 @@ import CustomAtencionWork from 'components/CustomAtencionWork/CustomAtencionWork
 import CustomContactFeature from 'CustomContactFeature/CustomContactFeature';
 import CustomServiciosFeature from 'components/CustomServiciosFeature/CustomServiciosFeature';
 import CustomServiciosMoreFeature from 'components/CustomServiciosFeature/CustomServiciosMoreFeature';
+import CustomSection from 'components/CustomSection/CustomSection';
 
 export default function Home({ posts, pagination, pageHome }) {
   const { metaTitle, slug, content, featuredImage, children } = pageHome;
@@ -49,15 +50,30 @@ export default function Home({ posts, pagination, pageHome }) {
   return (
     <>
       <HeaderMain />
-      <Nav />
-      <CustomHomeFront />
-      <CustomInfoPersonalHome />
-      <CustomHomeServicios />
-      <CustomExperienceComponent />
-      <CustomAtencionWork />
-      <CustomContactFeature />
-      <CustomServiciosFeature />
-      <CustomServiciosMoreFeature />
+      <Nav />{' '}
+      <CustomSection id="/inicio/">
+        <CustomHomeFront />
+      </CustomSection>
+      <CustomSection id="/sobre-mi/">
+        <CustomInfoPersonalHome />
+      </CustomSection>
+      <CustomSection id="/servicios/">
+        <CustomHomeServicios />
+      </CustomSection>
+      <CustomSection id="/experiencia/">
+        <CustomExperienceComponent />
+      </CustomSection>
+      <CustomSection id="/contacto/">
+        <CustomAtencionWork />
+
+        <CustomContactFeature />
+      </CustomSection>
+      <CustomSection id="/servicios/">
+        <CustomServiciosFeature />
+      </CustomSection>
+      <CustomSection id="/utilitarios/">
+        <CustomServiciosMoreFeature />
+      </CustomSection>
     </>
   );
 }

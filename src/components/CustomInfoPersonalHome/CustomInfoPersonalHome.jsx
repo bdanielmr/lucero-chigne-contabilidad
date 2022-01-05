@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './CustomInfoPersonalHome.module.scss';
+import { Link, animateScroll as scroll } from 'react-scroll';
 const CustomInfoPersonalHome = (props) => {
   return (
     <div className={styles['div-custom-info-main']}>
@@ -18,7 +19,9 @@ const CustomInfoPersonalHome = (props) => {
           Trujillo
         </p>
         <div className={styles['button-custom-info-main']}>
-          <button>Ver mas</button>
+          <Link activeClass="active" to="/servicios/" spy={true} smooth={true} offset={-70} duration={500}>
+            <button>Ver mas</button>
+          </Link>
         </div>
       </label>
       <div>

@@ -1,11 +1,12 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { useRouter } from 'next/router';
 import { Helmet } from 'react-helmet';
 import styles from './Layout.module.scss';
 
 import useSite from 'hooks/use-site';
 import { helmetSettingsFromMetadata } from 'lib/site';
+import HeaderMain from '../header_main/HeaderMain';
 
-import Nav from 'components/Nav';
 import Main from 'components/Main';
 
 const Layout = ({ children }) => {
@@ -62,12 +63,12 @@ const Layout = ({ children }) => {
   return (
     <div className={styles.layoutContainer}>
       <Helmet {...helmetSettings} />
-      <div className={styles.layoutContainerCenter}>
-        <Nav />
+      <HeaderMain />
+      <div className={styles.mainContainerCenterNav}>
+        <a href="/">Inicio</a>
       </div>
-      <div className={styles.mainContainerCenter}>
-        <Main>{children}</Main>
-      </div>
+
+      <Main>{children}</Main>
     </div>
   );
 };

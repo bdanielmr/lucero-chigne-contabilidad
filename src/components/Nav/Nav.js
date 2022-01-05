@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { useEffect, useRef, useState, useCallback } from 'react';
-import Link from 'next/link';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RiFacebookFill, RiInstagramLine, RiTwitterFill, RiCloseLine } from 'react-icons/ri';
 import useSite from 'hooks/use-site';
