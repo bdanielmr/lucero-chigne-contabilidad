@@ -15,7 +15,10 @@ module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]],
   // By enabling verbose logging, it will provide additional output details for
   // diagnostic purposes. By default is set to false.
   // verbose: true,
-
+  images: {
+    loader: 'imgix',
+    path: '',
+  },
   env: {
     WORDPRESS_GRAPHQL_ENDPOINT: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
     WORDPRESS_MENU_LOCATION_NAVIGATION: process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || 'PRIMARY',
