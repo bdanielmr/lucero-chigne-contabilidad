@@ -358,7 +358,7 @@ export default function Home({ posts, pagination, pageHome }) {
                   entre otras, las más conocidas como empresas con RUC 20) y la obtención de RUC con 10 (personas
                   naturales). Así también analizo cuáles son las mejores opciones para tí
                 </span>
-                <Image loader={() => src} src={src} alt="Picture of the author" width={150} height={200} />
+                <Image loader={() => src} src={src} alt="Picture of the author" width={150} height={280} />
               </div>
             </section>
           </CustomSection>
@@ -383,7 +383,7 @@ export default function Home({ posts, pagination, pageHome }) {
                   Financieros anuales firmados. ( Balances, estado de resultados) Envío mensual de score en el sistema
                   financiero
                 </span>
-                <Image loader={() => src1} src={src1} alt="Picture of the author" width={150} height={200} />
+                <Image loader={() => src1} src={src1} alt="Picture of the author" width={150} height={280} />
               </div>
             </section>
           </CustomSection>
@@ -404,7 +404,7 @@ export default function Home({ posts, pagination, pageHome }) {
                   entre otras, las más conocidas como empresas con RUC 20) y la obtención de RUC con 10 (personas
                   naturales). Así también analizo cuáles son las mejores opciones para tí.
                 </span>
-                <Image loader={() => src2} src={src2} alt="Picture of the author" width={150} height={200} />
+                <Image loader={() => src2} src={src2} alt="Picture of the author" width={150} height={280} />
               </div>
             </section>
           </CustomSection>
@@ -426,7 +426,7 @@ export default function Home({ posts, pagination, pageHome }) {
                   entre otras, las más conocidas como empresas con RUC 20) y la obtención de RUC con 10 (personas
                   naturales). Así también analizo cuáles son las mejores opciones para tí.
                 </span>
-                <Image loader={() => src4} src={src4} alt="Picture of the author" width={150} height={200} />
+                <Image loader={() => src4} src={src4} alt="Picture of the author" width={150} height={280} />
               </div>
             </section>
           </CustomSection>
@@ -446,7 +446,7 @@ export default function Home({ posts, pagination, pageHome }) {
                   Ante cualquier duda en temas de SUNAT, impuestos y tributos brindo soluciones eficientes. (Cartas,
                   esquelas, órdenes de pago, resoluciones de cobranza, entre otros)
                 </span>
-                <Image loader={() => src3} src={src3} alt="Picture of the author" width={150} height={200} />
+                <Image loader={() => src3} src={src3} alt="Picture of the author" width={150} height={280} />
               </div>
             </section>
           </CustomSection>
@@ -467,7 +467,7 @@ export default function Home({ posts, pagination, pageHome }) {
                   tienes que llevar a cabo, te explicaremos y orientaremos acerca de los documentos que necesitas
                   presentar y qué gestiones debes realizar
                 </span>
-                <Image loader={() => src5} src={src5} alt="Picture of the author" width={150} height={200} />
+                <Image loader={() => src5} src={src5} alt="Picture of the author" width={150} height={280} />
               </div>
             </section>
           </CustomSection>
