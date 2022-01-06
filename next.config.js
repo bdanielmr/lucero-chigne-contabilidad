@@ -16,7 +16,7 @@ module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]],
   // diagnostic purposes. By default is set to false.
   // verbose: true,
   images: {
-    loader: 'imgix',
+    loader: 'static',
     path: '',
   },
   env: {
