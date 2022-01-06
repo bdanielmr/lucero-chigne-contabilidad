@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import useSite from 'hooks/use-site';
 import { getPaginatedPosts } from 'lib/posts';
+import Image from 'next/image';
 
 import { getPageByUri } from 'lib/pages';
 import { WebsiteJsonLd } from 'lib/json-ld';
@@ -51,6 +52,7 @@ export default function Home({ posts, pagination, pageHome }) {
   const [changeBackgr, setChangeBackgr] = useState('#4348ca');
   const [changeDisplay, setchangeDisplay] = useState('inline');
   const [changeDisplayh6, setchangeDisplayh6] = useState('none');
+  const [changeHeig, setchangeHeig] = useState('22vh');
   const [titleHeader, settitleHeader] = useState('');
   const [showHambr, setshowHambr] = useState(false);
   const changeStyles = () => {
@@ -59,7 +61,11 @@ export default function Home({ posts, pagination, pageHome }) {
       '--mood-backgro-fondo': changeBackgr,
       '--mood-display-custom': changeDisplay,
       '--mood-display-custom-h6': changeDisplayh6,
+      '--mood-heigth-custom': changeHeig,
     };
+  };
+  const scrollToTop = () => {
+    scroll.scrollToTop();
   };
   const handleScroll = () => {
     if (window.scrollY >= 10) {
@@ -72,19 +78,21 @@ export default function Home({ posts, pagination, pageHome }) {
       setchangeDisplay('none');
       console.log('window.scrollY', window.scrollY);
       setchangeDisplayh6('inline');
+      setchangeHeig('13vh');
     } else {
       setChangeBackgr('#4348ca');
       setchangeDisplay('inline');
       setchangeDisplayh6('none');
+      setchangeHeig('22vh');
     }
 
-    if (window.scrollY >= 696) {
+    if (window.scrollY >= 700) {
       settitleHeader('Sobre mi');
     }
-    if (window.scrollY >= 1508) {
+    if (window.scrollY >= 1100) {
       settitleHeader('Servicios');
     }
-    if (window.scrollY >= 7100) {
+    if (window.scrollY >= 5000) {
       settitleHeader('Contacto');
     }
   };
@@ -103,10 +111,33 @@ export default function Home({ posts, pagination, pageHome }) {
       settitleHeader('Contacto');
     }
   };
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   });
+  useEffect(() => {
+    const aux = [1, 4, 45, 10, 6, -8];
+    const auxTwo = [];
+    let sumAux = 0;
+    console.log('aux[i]', aux.length);
+    for (let i = 0; i < aux.length; i++) {
+      console.log('aux[i]', aux[i]);
+
+      if (aux[i] % 2 === 0) {
+        sumAux = sumAux + aux[i];
+        auxTwo.push(aux[i]);
+      }
+    }
+    console.log(auxTwo, 'suma', sumAux);
+  }, []);
+  const src = 'https://i.imgur.com/CwszE7r.png';
+  const src1 = 'https://i.imgur.com/4PpanS8.png';
+  const src2 = 'https://i.imgur.com/dnVoT8r.png';
+  const src3 = 'https://i.imgur.com/BgL90Ds.png';
+  const src4 = 'https://i.imgur.com/f8Pah0Y.png';
+  const src5 = 'https://i.imgur.com/6vy6JGh.png';
+  const src6 = 'https://i.imgur.com/PzAc9ya.png';
   return (
     <>
       <div className={styles.deskResponse}>
@@ -159,7 +190,10 @@ export default function Home({ posts, pagination, pageHome }) {
           <div className={styles.mobileResponseButtonHeadHeader}>
             <ul>
               <Link
-                onClick={(e) => handleLink(e, '/inicio-mi-mobile/')}
+                onClick={() => {
+                  setshowHambr(false);
+                  scrollToTop();
+                }}
                 activeClass="active"
                 to="/inicio-mi-mobile/"
                 spy={true}
@@ -176,7 +210,7 @@ export default function Home({ posts, pagination, pageHome }) {
                 to="/sobre-mi-mobile/"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={10}
                 duration={500}
               >
                 <li> Sobre mi </li>
@@ -188,7 +222,7 @@ export default function Home({ posts, pagination, pageHome }) {
                 to="/servicios-mi-mobile/"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={0}
                 duration={500}
               >
                 <li>Servicios</li>
@@ -219,49 +253,257 @@ export default function Home({ posts, pagination, pageHome }) {
           </div>
           <CustomSection id="/sobre-mi-mobile/">
             <section id="section-one" className={styles.sectionMobile + ' ' + styles.sectionMobileone}>
-              <p>Hola, Mi nombre es Lucerochigne</p>
-              <p>Contadora pública colegiada, empresaria y diseñadora gráfica</p>
-              <p>
-                Con experiencia en temas tributarios, logísticos, financieros y laborales del país en rubros
-                comerciales, publicidad, marketing, transportes, asociaciones sin fines de lucro, servicios freelancer,
-                inversiones digitales, entre otros.
-              </p>
+              <div className={styles.sectionMobileTextP}>
+                <h3>Hola, Mi nombre es Lucero chigne</h3>
+                <p>Contadora pública colegiada, empresaria y diseñadora gráfica</p>
+                <span>
+                  Con experiencia en temas tributarios, logísticos, financieros y laborales del país en rubros
+                  comerciales, publicidad, marketing, transportes, asociaciones sin fines de lucro, servicios
+                  freelancer, inversiones digitales, entre otros.
+                </span>
+              </div>
               <div className={styles.sectionMobileBckgrong}></div>
             </section>
           </CustomSection>
           <CustomSection id="/servicios-mi-mobile/">
             <section id="section-two" className={styles.sectionMobile + ' ' + styles.sectionMobiletwo}>
-              <p>Hola, Mi nombre es Lucerochigne</p>
-              <p>Contadora pública colegiada, empresaria y diseñadora gráfica</p>
-              <p>
-                Con experiencia en temas tributarios, logísticos, financieros y laborales del país en rubros
-                comerciales, publicidad, marketing, transportes, asociaciones sin fines de lucro, servicios freelancer,
-                inversiones digitales, entre otros.
-              </p>
+              <div
+                style={{
+                  'text-align': 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
+                className={styles.sectionMobileTextP}
+              >
+                <Link
+                  activeClass="active"
+                  to="/constitucion-empresa-mi-mobile/"
+                  spy={true}
+                  smooth={true}
+                  offset={70}
+                  duration={500}
+                >
+                  <p style={{ width: '190px', margin: '5px' }}>Constitución de Empresas</p>
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="/Outsourcing-empresa-mi-mobile/"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  <p style={{ width: '180px', margin: '2px' }}>Outsourcing Contable</p>
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="/planeacion-tributaria-mi-mobile/"
+                  spy={true}
+                  smooth={true}
+                  offset={70}
+                  duration={500}
+                >
+                  <p style={{ width: '175px', margin: '3px' }}>Planeación Tributaria</p>
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="/asesoramient-laboral-mi-mobile/"
+                  spy={true}
+                  smooth={true}
+                  offset={70}
+                  duration={500}
+                >
+                  <p style={{ width: '185px', margin: '5px' }}>Asesoramiento Laboral</p>
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="/asesoramiento-tributario-mi-mobile/"
+                  spy={true}
+                  smooth={true}
+                  offset={70}
+                  duration={500}
+                >
+                  <p style={{ width: '195px', margin: '2px' }}>Asesoramiento Tributario</p>
+                </Link>
+                <Link
+                  activeClass="active"
+                  to="/asesoramiento-aduanero-mi-mobile/"
+                  spy={true}
+                  smooth={true}
+                  offset={70}
+                  duration={500}
+                >
+                  <p style={{ width: '190px', margin: '5px' }}>Asesoramiento Aduanero</p>
+                </Link>
+                <p style={{ width: '70px', margin: '0' }}>Otros</p>
+              </div>
               <div className={styles.sectionMobileBckgrong}></div>
             </section>
           </CustomSection>
-          <section id="section-four" className={styles.sectionMobile + ' ' + styles.sectionMobilefour}>
-            constitycu
-          </section>
-          <section id="section-five" className={styles.sectionMobile + ' ' + styles.sectionMobilefive}>
-            <p>outsicrc</p>
-          </section>
-          <section id="section-six" className={styles.sectionMobile + ' ' + styles.sectionMobilesix}>
-            <p>tributaria</p>
-          </section>
-          <section id="section-seven" className={styles.sectionMobile + ' ' + styles.sectionMobileseven}>
-            <p>laboral</p>
-          </section>
-          <section id="section-eight" className={styles.sectionMobile + ' ' + styles.sectionMobileeight}>
-            <p>sasesor trs</p>
-          </section>
-          <section id="section-nine" className={styles.sectionMobile + ' ' + styles.sectionMobilenine}>
-            <p>sasesor aduanero</p>
-          </section>
+          <CustomSection id="/constitucion-empresa-mi-mobile/">
+            <section id="section-four" className={styles.sectionMobile + ' ' + styles.sectionMobilefour}>
+              <div
+                style={{
+                  'text-align': 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
+                className={styles.sectionMobileTextP}
+              >
+                <p>Constitución de Empresas</p>
+                <span style={{ marginBottom: '10px' }}>
+                  Ofrezco la opción de asesorar la creación de personas jurídicas (empresas, sociedades, asociaciones,
+                  entre otras, las más conocidas como empresas con RUC 20) y la obtención de RUC con 10 (personas
+                  naturales). Así también analizo cuáles son las mejores opciones para tí
+                </span>
+                <Image loader={() => src} src={src} alt="Picture of the author" width={150} height={200} />
+              </div>
+            </section>
+          </CustomSection>
+          <CustomSection id="/Outsourcing-empresa-mi-mobile/">
+            <section id="section-five" className={styles.sectionMobile + ' ' + styles.sectionMobilefive}>
+              <div
+                style={{
+                  'text-align': 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
+                className={styles.sectionMobileTextP}
+              >
+                <p>Outsourcing Contable</p>
+                <span style={{ marginBottom: '10px' }}>
+                  Inducción de temas contables y tributarios para tí. Registro de operaciones (compras, gastos y ventas)
+                  Archivo de documentación física (permanencia un año) Presentación de libros contables (Libros
+                  electrónicos - PLE) Declaración de impuestos mensuales y anuales (PDT 621) Declaraciones anuales
+                  impuesto a la renta, Declaración anual de operaciones con terceros - DAOT) Gestión de detracciones
+                  Elaboración de reportes financieros de gestión trimestrales y a solicitud. Emisión de Estados
+                  Financieros anuales firmados. ( Balances, estado de resultados) Envío mensual de score en el sistema
+                  financiero
+                </span>
+                <Image loader={() => src1} src={src1} alt="Picture of the author" width={150} height={200} />
+              </div>
+            </section>
+          </CustomSection>
+          <CustomSection id="/planeacion-tributaria-mi-mobile/">
+            <section id="section-six" className={styles.sectionMobile + ' ' + styles.sectionMobilesix}>
+              <div
+                style={{
+                  'text-align': 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
+                className={styles.sectionMobileTextP}
+              >
+                <p>Planeación Tributaria</p>
+                <span style={{ marginBottom: '10px' }}>
+                  Ofrezco la opción de asesorar la creación de personas jurídicas (empresas, sociedades, asociaciones,
+                  entre otras, las más conocidas como empresas con RUC 20) y la obtención de RUC con 10 (personas
+                  naturales). Así también analizo cuáles son las mejores opciones para tí.
+                </span>
+                <Image loader={() => src2} src={src2} alt="Picture of the author" width={150} height={200} />
+              </div>
+            </section>
+          </CustomSection>
+
+          <CustomSection id="/asesoramient-laboral-mi-mobile/">
+            <section id="section-eight" className={styles.sectionMobile + ' ' + styles.sectionMobileeight}>
+              <div
+                style={{
+                  'text-align': 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
+                className={styles.sectionMobileTextP}
+              >
+                <p>Asesoramiento Laboral</p>
+                <span style={{ marginBottom: '10px' }}>
+                  Ofrezco la opción de asesorar la creación de personas jurídicas (empresas, sociedades, asociaciones,
+                  entre otras, las más conocidas como empresas con RUC 20) y la obtención de RUC con 10 (personas
+                  naturales). Así también analizo cuáles son las mejores opciones para tí.
+                </span>
+                <Image loader={() => src4} src={src4} alt="Picture of the author" width={150} height={200} />
+              </div>
+            </section>
+          </CustomSection>
+          <CustomSection id="/asesoramiento-tributario-mi-mobile/">
+            <section id="section-seven" className={styles.sectionMobile + ' ' + styles.sectionMobileseven}>
+              <div
+                style={{
+                  'text-align': 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
+                className={styles.sectionMobileTextP}
+              >
+                <p>Asesoramiento Tributario</p>
+                <span style={{ marginBottom: '10px' }}>
+                  Ante cualquier duda en temas de SUNAT, impuestos y tributos brindo soluciones eficientes. (Cartas,
+                  esquelas, órdenes de pago, resoluciones de cobranza, entre otros)
+                </span>
+                <Image loader={() => src3} src={src3} alt="Picture of the author" width={150} height={200} />
+              </div>
+            </section>
+          </CustomSection>
+          <CustomSection id="/asesoramiento-aduanero-mi-mobile/">
+            <section id="section-nine" className={styles.sectionMobile + ' ' + styles.sectionMobilenine}>
+              <div
+                style={{
+                  'text-align': 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
+                className={styles.sectionMobileTextP}
+              >
+                <p>Asesoramiento Aduanero</p>
+                <span style={{ marginBottom: '10px' }}>
+                  Si estás interesado en importar o exportar mercancía, también te guiaré sobre los trámites aduaneros
+                  tienes que llevar a cabo, te explicaremos y orientaremos acerca de los documentos que necesitas
+                  presentar y qué gestiones debes realizar
+                </span>
+                <Image loader={() => src5} src={src5} alt="Picture of the author" width={150} height={200} />
+              </div>
+            </section>
+          </CustomSection>
           <CustomSection id="/contacto-mi-mobile/">
             <section id="section-ten" className={styles.sectionMobile + ' ' + styles.sectionMobileten}>
-              <p>sasesor aduanero</p>
+              <div
+                style={{
+                  'text-align': 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                }}
+                className={styles.sectionMobileTextP}
+              >
+                <Image loader={() => src6} src={src6} alt="Picture of the author" width={250} height={190} />
+                <p>Contabilidad para todos</p>
+                <span style={{ marginBottom: '10px', color: 'white' }}>
+                  Para trabajar juntos me puedes contactar por estos medios:
+                </span>
+                <div
+                  style={{
+                    width: '100%',
+
+                    display: 'flex',
+                    flexDirection: 'column',
+                    textAlign: 'right',
+                  }}
+                >
+                  <p style={{ margin: '0' }}>
+                    <span className={styles.wsspIcon}></span>979979835
+                  </p>
+                  <p style={{ margin: '0 0 100px 0' }}>
+                    <span className={styles.letterIcon}></span>l.chigne.m@gmail.com
+                  </p>
+                </div>
+              </div>
             </section>
           </CustomSection>
         </main>

@@ -249,7 +249,7 @@
   .mobileResponseLogo {
     background: var(--mood-backgro-fondo);
     text-align: center;
-    height: 22vh;
+    height: var(--mood-heigth-custom);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -285,7 +285,7 @@
       position: relative;
       display: flex;
       justify-content: center;
-      top: -30px;
+      top: -20px;
       width: 100%;
       height: 60vh;
 
@@ -306,7 +306,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 4;
+  z-index: 5;
 }
 .buttonMobileChat {
   width: 80px;
@@ -349,46 +349,65 @@
   }
   &four {
     position: relative;
-
+    z-index: 2;
     background: white;
   }
   &five {
     position: relative;
-
+    z-index: 2;
     background: white;
   }
   &six {
     position: relative;
-
+    z-index: 2;
     background: white;
   }
   &seven {
     position: relative;
-
+    z-index: 2;
     background: white;
   }
   &eight {
     position: relative;
-
+    z-index: 2;
     background: white;
   }
   &nine {
     position: relative;
-
+    z-index: 2;
     background: white;
   }
   &ten {
     position: relative;
+    z-index: 2;
     background: #4348ca;
   }
 }
+.sectionMobileTextP {
+  position: relative;
+  z-index: 4;
+  padding: 10px;
+  width: 80%;
+  top: 10%;
+  h3 {
+    width: 250px;
+  }
+  p {
+    background: #4348ca;
+    width: 250px;
+    color: white;
+  }
+}
 .sectionMobileBckgrong {
-  background-image: url("https://i.imgur.com/GcTol3O.png");
+  background-image: url("https://i.imgur.com/Qa3nGRj.png");
   z-index: 3;
   height: 100%;
   width: 100%;
   position: absolute;
   background-repeat: no-repeat;
+  @media (max-height: 600px) {
+    background-image: url("https://i.imgur.com/LK3R3oz.png");
+  }
 }
 .mobileResponseButtonHead {
   height: 70px;
@@ -440,11 +459,34 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-
+    padding: 10% 0;
     li {
       position: relative;
       color: white;
       z-index: 9;
+      font-size: 20px;
+      @media (max-height: 750px) {
+        font-size: 13px;
+        font-weight: 500;
+      }
     }
   }
+}
+.dontAffect {
+  position: relative;
+  z-index: 4;
+}
+.wsspIcon::before {
+  font-family: fontAwesome;
+  font-size: 22px;
+  content: "\f1d8";
+  margin: 5px;
+  color: black;
+}
+.letterIcon::before {
+  font-family: fontAwesome;
+  font-size: 22px;
+  content: "\f0e0";
+  margin: 5px;
+  color: white;
 }
