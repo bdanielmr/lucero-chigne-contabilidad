@@ -15,8 +15,7 @@ index.propTypes = {};
 export default index;
 export async function getStaticProps() {
   const { posts, pagination } = await getPaginatedPosts();
-  const { page: pageHome } = await getPageByUri('/home/');
-  console.log('page, home', pageHome);
+  const { page: pageHome } = await getPageByUri('/inicio/');
   return {
     props: {
       pageHome,
