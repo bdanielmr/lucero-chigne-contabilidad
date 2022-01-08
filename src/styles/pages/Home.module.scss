@@ -490,3 +490,48 @@
   margin: 5px;
   color: white;
 }
+/////@at-root
+
+.mobileResponseSobreMi {
+  @media (max-width: 750px) {
+    display: none;
+  }
+}
+.sobreMicontainer {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}
+.sobreMicontainerLabel {
+  width: 80%;
+
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sobreMicontainerLabelDivImage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sobreMicontainerLabeText {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.sobreMicontainerLabeTextWroap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 0 8%;
+}
+.sobreMicontainerContacto {
+}
+.mobileResponseasesoramientoAduanero {
+}

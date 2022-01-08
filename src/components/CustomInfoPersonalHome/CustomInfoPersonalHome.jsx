@@ -19,9 +19,9 @@ const CustomInfoPersonalHome = (props) => {
           Trujillo
         </p>
         <div className={styles['button-custom-info-main']}>
-          <Link activeClass="active" to="/servicios/" spy={true} smooth={true} offset={-70} duration={500}>
+          <a activeClass="active" href="/sobre-mi">
             <button>Ver mas</button>
-          </Link>
+          </a>
         </div>
       </label>
       <div>

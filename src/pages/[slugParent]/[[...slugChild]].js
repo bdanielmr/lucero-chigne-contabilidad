@@ -122,7 +122,7 @@ export default function Page({ page, breadcrumbs }) {
                 cursor: 'n-resize;',
               }}
             >
-              <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>
+              <p style={{ margin: '0', fontSize: '1rem', color: 'black' }}>
                 Contadora pública colegiada, empresaria y diseñadora gráfica
               </p>
               <p style={{ margin: '0', fontSize: '1rem', color: 'white' }}>

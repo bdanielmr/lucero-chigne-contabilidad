@@ -5,7 +5,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './CustomHomeServicios.module.scss';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import { useRouter } from 'next/router';
 const CustomHomeServicios = (props) => {
+  const router = useRouter();
   const cardOption = [
     {
       img: 'https://i.imgur.com/CwszE7r.png',
@@ -65,6 +67,10 @@ pagar...`,
       path: '/asesoramiento-aduanero/',
     },
   ];
+  const handleClick = (e, route) => {
+    e.preventDefault();
+    router.push(route);
+  };
   return (
     <div className={styles['main-flex-sheet']}>
       <div className={styles['container-img-info']}>
@@ -83,9 +89,10 @@ pagar...`,
               <img src={card.img} />
               <p>{card.tittle}</p>
               <span>{card.info}</span>
-              <Link activeClass="active" to={card.path} spy={true} smooth={true} offset={-70} duration={500}>
+
+              <a activeClass="active" href={card.path}>
                 <button>ver mas</button>
-              </Link>
+              </a>
             </div>
           );
         })}

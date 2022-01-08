@@ -23,6 +23,14 @@ const NavListItem = ({ className, item }) => {
             {' '}
             {item.label}
           </a>
+        ) : item.path === '/sobre-mi/' ? (
+          <a href="/sobre-mi" title={item.title}>
+            {item.label}
+          </a>
+        ) : item.path === '/servicios/' ? (
+          <a href="/servicios" title={item.title}>
+            {item.label}
+          </a>
         ) : (
           <Link activeClass="active" to={item.path} spy={true} smooth={true} offset={-70} duration={500}>
             {item.label}
@@ -37,6 +45,14 @@ const NavListItem = ({ className, item }) => {
         ) : item.path === '/blog/' ? (
           <a href="/posts" title={item.title}>
             {' '}
+            {item.label}
+          </a>
+        ) : item.path === '/sobre-mi/' ? (
+          <a href="/sobre-mi" title={item.title}>
+            {item.label}
+          </a>
+        ) : item.path === '/servicios/' ? (
+          <a href="/servicios" title={item.title}>
             {item.label}
           </a>
         ) : (
