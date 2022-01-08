@@ -10,9 +10,6 @@ import Nav from 'components/Nav';
 import Image from 'next/image';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import CustomContactFeature from 'CustomContactFeature/CustomContactFeature';
-import CustomServiciosFeature from 'components/CustomServiciosFeature/CustomServiciosFeature';
-import styles2 from '../../components/CustomServiciosFeature/CustomServiciosFeature.module.scss';
-import CustomServiciosMoreFeature from 'components/CustomServiciosFeature/CustomServiciosMoreFeature';
 function index(props) {
   const [changeIndex, setChangeIndex] = useState(5);
   const [changeBackgr, setChangeBackgr] = useState('#4348ca');
@@ -85,12 +82,40 @@ function index(props) {
   const src = 'https://i.imgur.com/2tvIqhj.png';
   return (
     <>
-      <div className={styles.mobileResponseasesoramientoAduanero}>
-        <HeaderMain />
-        <Nav />
-
-        <CustomServiciosFeature />
-        <CustomServiciosMoreFeature />
+      <div className={styles.mobileResponseSobreMi}>
+        <main>
+          <div className={styles.sobreMicontainer}>
+            <div className={styles.sobreMicontainerLabel}>
+              <div className={styles.sobreMicontainerLabelDivImage}>
+                <Image loader={() => src} src={src} alt="Picture of the author" width={300} height={400} />
+              </div>
+              <div className={styles.sobreMicontainerLabeText}>
+                <h4>Sobre Mi</h4>
+                <p>
+                  Contadora pública colegiada, empresaria y diseñadora gráfica con experiencia en temas
+                  tributarios,logísticos, financieros y laborales del país en rubros comerciales, publicidad, marketing,
+                  transportes, asociaciones sin fines de lucro, servicios freelancer, inversiones digitales, entre
+                  otros. Especialista en tributación por el colegio de contadores de La Libertad - sede Trujillo.
+                </p>
+                <p>
+                  En este espacio busco asesorarte y diseñar un plan estratégico para que puedas gestionar tus finanzas,
+                  mantener un historial crediticio favorable, evitar inconvenientes con las instituciones del Estado y
+                  prevenir sanciones, multas o embargos.
+                </p>
+              </div>
+              <div className={styles.sobreMicontainerLabeTextWroap}>
+                <p>
+                  Entiendo que el mundo es amplio, la tecnología no para, ni las inversiones ni el internet. Mientras
+                  estás leyendo esto, todos siguen operando; así que mi intención es que puedas construir tu futuro sin
+                  temor. Te ofrezco brindarte un asesoramiento a medida, orientación y recomendaciones personalizadas
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div className={styles.sobreMicontainerContacto}>
+          <CustomContactFeature />
+        </div>
       </div>
       <div>
         <div style={changeStyles()} className={styles.mobileResponse}>
@@ -171,7 +196,32 @@ function index(props) {
             </div>
           )}
           <main>
-            <CustomServiciosFeature />
+            <div className={styles.sobreMicontainer}>
+              <div className={styles.sobreMicontainerLabel}>
+                <div className={styles.sobreMicontainerLabeText}>
+                  <h4>Sobre Mi</h4>
+                  <img src={src} width="100%" />
+                  <p>
+                    Contadora pública colegiada, empresaria y diseñadora gráfica con experiencia en temas
+                    tributarios,logísticos, financieros y laborales del país en rubros comerciales, publicidad,
+                    marketing, transportes, asociaciones sin fines de lucro, servicios freelancer, inversiones
+                    digitales, entre otros. Especialista en tributación por el colegio de contadores de La Libertad -
+                    sede Trujillo.
+                  </p>
+                  <p>
+                    En este espacio busco asesorarte y diseñar un plan estratégico para que puedas gestionar tus
+                    finanzas, mantener un historial crediticio favorable, evitar inconvenientes con las instituciones
+                    del Estado y prevenir sanciones, multas o embargos.
+                  </p>
+                  <p>
+                    Entiendo que el mundo es amplio, la tecnología no para, ni las inversiones ni el internet. Mientras
+                    estás leyendo esto, todos siguen operando; así que mi intención es que puedas construir tu futuro
+                    sin temor. Te ofrezco brindarte un asesoramiento a medida, orientación y recomendaciones
+                    personalizadas
+                  </p>
+                </div>
+              </div>
+            </div>
           </main>
         </div>
       </div>
