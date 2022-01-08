@@ -64,7 +64,7 @@ export default function Page({ page, breadcrumbs }) {
         siteTitle={siteMetadata.title}
         slug={slug}
       />
-      {title === 'Inicio' && <ComponentInicio />}
+
       {title === 'Sobre mi' && <ComponentSobreMi />}
       {title === 'Servicios' && <ComponentServicios />}
       {title === 'Blog' && (
