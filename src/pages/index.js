@@ -52,7 +52,7 @@ export default function Home({ posts, pagination, pageHome }) {
   const [changeBackgr, setChangeBackgr] = useState('#4348ca');
   const [changeDisplay, setchangeDisplay] = useState('inline');
   const [changeDisplayh6, setchangeDisplayh6] = useState('none');
-  const [changeHeig, setchangeHeig] = useState('22vh');
+  const [changeHeig, setchangeHeig] = useState('25vh');
   const [titleHeader, settitleHeader] = useState('');
   const [showHambr, setshowHambr] = useState(false);
   const changeStyles = () => {
@@ -83,7 +83,7 @@ export default function Home({ posts, pagination, pageHome }) {
       setChangeBackgr('#4348ca');
       setchangeDisplay('inline');
       setchangeDisplayh6('none');
-      setchangeHeig('22vh');
+      setchangeHeig('25vh');
     }
 
     if (window.scrollY >= 700) {
